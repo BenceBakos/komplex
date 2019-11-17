@@ -17,11 +17,11 @@
 	}
 
 	let interv = 10;
-
+	let rgbAValue='0.5';
 	function changeColorInit() {
 		let setColor = (color) => document.body.style.backgroundColor = color;
 		//set starter color
-		setColor('rgba(' + tlTexts[0].getAttribute('data-color') + ',0.2)')
+		setColor('rgba(' + tlTexts[0].getAttribute('data-color') + ','+rgbAValue+')')
 
 		let getPos = () => window.pageYOffset || main.scrollTop;
 
@@ -48,7 +48,7 @@
 					colorArr.push({
 						max: 0,
 						min: 0,
-						color: `rgba(${lastR},${lastG},${lastB},0.2)`
+						color: `rgba(${lastR},${lastG},${lastB},${rgbAValue})`
 					});
 					if (Math.abs(lastR - nextR) != 0) {
 						lastR = closerByOne(lastR, nextR);
@@ -88,7 +88,7 @@
 				try {
 					setColor(getColorForPos(newPos).color);
 				} catch (e) {
-					//cconsole.log(e);
+					//console.log(e);
 				}
 			}
 		}, interv);

@@ -71,10 +71,19 @@ h1,h2,h3,h4{
 	font-size:0.6rem;
 }
 /*components*/
+ .content-img{
+	width:84vw;
+	height:20rem;
+	margin-left:3vw;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+ }
 main{
 	height:100vh;
 	padding:0;
 	margin:0;
+	padding-top:2rem;
 }
 
 section{
@@ -83,7 +92,7 @@ section{
 	text-align:left;
 }
 
-h1,p,blockquote,figure,aside{
+h1,p,blockquote,figure,aside, .content-img{
 	padding-left:3vw;
 	margin-bottom:2rem;
 }
@@ -97,7 +106,8 @@ h1,figure{
 }
 
 h1{
-	
+	border-bottom: 0.15rem solid white;
+	padding-bottom:2rem;
 }
 
 blockquote{
@@ -234,7 +244,8 @@ figcaption{
 		width:23vw;
 	}
 	.tl-text{
-		width:20vw;
+		width:10vw;
+		right:5vw;
 	}
 	.tl-vertical-line{
 		right:10vw;
@@ -243,14 +254,17 @@ figcaption{
 	.tl-title{
 		display:block;
 	}
-
+	.content-img{
+		width:74vw;
+		margin-right:20vw;
+	}
 }
 /*for-desktop-up*/
 @media (min-width: 1200px) {
 	body{
 		font-size:16px;
 	}
-	h1,p,blockquote,aside{
+	h1,p,blockquote,aside, .content-img{
 		padding-right:20vw;
 	}
 	/*album-covers-desktop*/
@@ -263,8 +277,13 @@ figcaption{
 		height:14vw;
 	}
 	figcaption{
-		width:23vw;
+		width:15vw;
 	}	
+	.content-img{
+		width:54vw;
+		height:70vh;
+		margin-right:20vw;
+	}
 }
 
 /*for-big-desktop-up*/
