@@ -5,23 +5,25 @@
 	function scrollToInit() {
 		tlTexts.forEach(tlText => {
 			tlText.addEventListener('click', function (e) {
-				e.preventDefault();
-
-				document.querySelector(this.getAttribute('href')).scrollIntoView({
-					behavior: 'smooth'
-				});
-
-				location.hash = this.getAttribute('href');
+				let target = document.querySelector(this.getAttribute('href'));
+				if (target.length) {
+					e.preventDefault();
+					$target.scrollIntoView({
+						behavior: 'smooth'
+					});
+					console.log(document.querySelector(this.getAttribute('href')));
+					location.hash = this.getAttribute('href');
+				}
 			});
 		});
 	}
 
 	let interv = 10;
-	let rgbAValue='0.5';
+	let rgbAValue = '0.3';
 	function changeColorInit() {
 		let setColor = (color) => document.body.style.backgroundColor = color;
 		//set starter color
-		setColor('rgba(' + tlTexts[0].getAttribute('data-color') + ','+rgbAValue+')')
+		setColor('rgba(' + tlTexts[0].getAttribute('data-color') + ',' + rgbAValue + ')')
 
 		let getPos = () => window.pageYOffset || main.scrollTop;
 

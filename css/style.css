@@ -78,6 +78,8 @@ h1,h2,h3,h4{
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size:cover;
+	-webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(50%);
  }
 main{
 	height:100vh;
@@ -106,7 +108,7 @@ h1,figure{
 }
 
 h1{
-	border-bottom: 0.15rem solid white;
+	border-left: 0.15rem solid rgba(255, 255, 255, 0.3);
 	padding-bottom:2rem;
 }
 
@@ -121,10 +123,17 @@ blockquote{
 figure{
 	text-align:center;
 }
+
+.album-cover:hover{
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+}
+
 .album-cover{
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size:cover;
+	
 }
 
 figcaption{
@@ -179,15 +188,13 @@ figcaption{
 	width:0;
 	height:100vh;
 	box-sizing:border-box;
-	border-left:0.15rem solid white;
+	border-left: 0.15rem solid rgba(255, 255, 255, 0.3);
 }
 
 .tl-title,.tl-time{
-	background-color:white;
 }
 .tl-active-text{
 	color:white;
-	background-color:black;
 }
 
 
@@ -199,6 +206,9 @@ figcaption{
 
 .tl-text{
 	width:10vw;
+	background-color:rgba(255,255,255,0.7);
+	border:1px solid rgba(255,255,255,0.7);
+	border-radius:2px;
 }
 .tl-vertical-line{
 	right:5vw;
