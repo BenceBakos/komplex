@@ -1,6 +1,8 @@
 /*------------global*/
-
 /*generic*/
+*{
+	scroll-behavior: smooth;
+}
 html,body,body *{
 	padding:0;
 	margin:0;
@@ -19,6 +21,34 @@ main{
 /*colors*/
 
 /*font*/
+
+/*for regular text, 80%percent of content*/
+@font-face {
+  font-family: Asap;
+  src: url(fonts/Asap-Regular.ttf);
+}
+p,input,b,i,span,.text{
+	font-family: Asap;
+}
+
+/*headers*/
+@font-face {
+  font-family: AsapHeader;
+  src: url(fonts/Asap-Medium.ttf);
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: AsapHeader;
+}
+/*little texts, captions, labels*/
+@font-face {
+  font-family: AsapLabel;
+  src: url(fonts/Asap-Italic.ttf);
+}
+.little, figcaption, blockquote{
+	font-family: AsapLabel;
+}
+
+/*text-size*/
 h1{
 	font-size:2.3rem;
 }
@@ -66,10 +96,13 @@ h1,figure{
 	text-align:left;
 }
 
+h1{
+	
+}
+
 blockquote{
-	margin-left:3vw;
+	margin-left:5vw;
 	padding-left:2vw;
-	border-left:1rem solid black;
 	min-height:5rem;
 	display: flex;
 	align-items: center;
@@ -112,28 +145,47 @@ figcaption{
 
 .tl-vertical-line, .tl-text{
 	position:fixed;
-	top:0;
 }
 
 .tl-text{
+	color:black;
+	text-decoration:none;
+	display:block;
 	text-align:center;
 	right:0;
+	top:10vh;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+						  supported by Chrome and Opera */
+
 }
 
 .tl-vertical-line{
+	top:0;
 	width:0;
 	height:100vh;
 	box-sizing:border-box;
-	border-left:0.15rem solid black;
+	border-left:0.15rem solid white;
 }
 
 .tl-title,.tl-time{
 	background-color:white;
 }
+.tl-active-text{
+	color:white;
+	background-color:black;
+}
+
 
 .tl-title{
 	display:none;
 }
+
+
 
 .tl-text{
 	width:10vw;
@@ -141,7 +193,6 @@ figcaption{
 .tl-vertical-line{
 	right:5vw;
 }
-
 /*------------breakpoints*/
 
 /*phone only*/
