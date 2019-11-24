@@ -1,4 +1,6 @@
-(function () {
+function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+
+r(function () {
 	let tlTexts = [...document.getElementsByClassName('tl-text')];
 	let main = document.querySelector('main');
 
@@ -99,5 +101,4 @@
 	//----------------INIT---------------
 	scrollToInit();
 	changeColorInit();
-}
-	());
+});

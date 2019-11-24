@@ -30,7 +30,10 @@ main{
 p,input,b,i,span,.text{
 	font-family: Asap;
 }
-
+a{
+	color:black;
+	text-decoration:none;
+}
 /*headers*/
 @font-face {
   font-family: AsapHeader;
@@ -99,7 +102,7 @@ h1,p,blockquote,figure,aside, .content-img{
 	margin-bottom:2rem;
 }
 
-p,blockquote{
+p,blockquote,h1{
 	text-align:justify;
 }
 
@@ -109,16 +112,9 @@ h1,figure{
 
 h1{
 	border-left: 0.15rem solid rgba(255, 255, 255, 0.3);
-	padding-bottom:2rem;
 }
 
-blockquote{
-	margin-left:5vw;
-	padding-left:2vw;
-	min-height:5rem;
-	display: flex;
-	align-items: center;
-}
+
 
 figure{
 	text-align:center;
@@ -143,6 +139,8 @@ figcaption{
 h1,p,blockquote,aside{
 	padding-right:10vw;
 }
+
+
 /*album-covers-mobile*/
 
 figure{
@@ -158,6 +156,10 @@ figcaption{
 	width:41vw;
 }
 
+#header-title{
+	border-bottom:3px solid rgba(255,255,255,0.3);
+	letter-spacing:10px;
+}
 /*timeline*/
 #timeLine{
 }
@@ -213,6 +215,17 @@ figcaption{
 .tl-vertical-line{
 	right:5vw;
 }
+
+.content-img{
+	position:relative;
+}
+.content-img h1{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.5);
+}
+
 /*------------breakpoints*/
 
 /*phone only*/
@@ -276,6 +289,10 @@ figcaption{
 	}
 	h1,p,blockquote,aside, .content-img{
 		padding-right:20vw;
+	}
+	p,blockquote{
+		padding-left:3vw;
+		padding-right:32vw;
 	}
 	/*album-covers-desktop*/
 	figure{
