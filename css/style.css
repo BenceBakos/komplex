@@ -68,7 +68,7 @@ h1,h2,h3,h4{
 	font-weight: normal;
 }
 .little{
-	font-size:0.6rem;
+	font-size:0.8rem;
 }
 /*components*/
  .content-img{
@@ -86,6 +86,7 @@ main{
 	padding:0;
 	margin:0;
 	padding-top:2rem;
+	overflow-x:hidden;
 }
 
 section{
@@ -143,7 +144,7 @@ h1,p,blockquote,aside{
 /*album-covers-mobile*/
 
 figure{
-	width:43vw;
+	width:41vw;
 	float:left;
 	padding:0vw;
 }
@@ -215,6 +216,10 @@ figcaption{
 	right:5vw;
 }
 
+
+.tl-open{
+	opacity:0.5;
+}
 .content-img{
 	position:relative;
 }
@@ -279,6 +284,14 @@ figcaption{
 	.content-img{
 		width:74vw;
 		margin-right:20vw;
+	}
+	
+	
+	.tl-open{
+		position: absolute;
+		right: 0;
+		top: 0;
+	
 	}
 }
 /*for-desktop-up*/

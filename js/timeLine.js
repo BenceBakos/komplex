@@ -19,6 +19,12 @@ r(function () {
 			});
 		});
 	}
+	function scrollFirstTimeInit(){
+		//scroll to element first time
+		document.querySelector(location.hash).scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
 
 	let interv = 10;
 	let rgbAValue = '0.3';
@@ -101,4 +107,5 @@ r(function () {
 	//----------------INIT---------------
 	scrollToInit();
 	changeColorInit();
+	scrollFirstTimeInit();
 });
